@@ -18,6 +18,10 @@ export const footerLists = [
                 title: 'Datenschutz',
                 slug: '/company/datenschutz',
             },
+            {
+                title: 'AGBs',
+		        slug: '/company/agb',
+            },
         ],
     },
     {
@@ -31,6 +35,7 @@ export const footerLists = [
                 title: 'Leistungen und Workflow',
                 slug: '/company/Leistungen_und_Workflow',
             },
+            	
         ],
     },
     {
