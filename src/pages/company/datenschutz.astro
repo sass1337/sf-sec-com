@@ -1,0 +1,91 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+  title: `Datenschutzerklärung | SF-SEC`,
+  description: `Vollständige Datenschutzerklärung von SF-SEC - Sonnenfroh IT-Security gemäß DSGVO.`,
+};
+
+const email = "l.s@sf-sec.com";
+const firma = "SF-SEC - Sonnenfroh IT-Security";
+const stand = "01.01.2026";
+---
+
+<Layout seo={seo}>
+  <TextSection narrow>
+    <h1>Datenschutzerklärung</h1>
+
+    <p>
+      In dieser Datenschutzerklärung finden Sie detaillierte Informationen darüber, was mit Ihren persönlichen Daten geschieht, wenn Sie unsere Website <strong>sf-sec.com</strong> besuchen. Alle Daten, die eine persönliche Identifizierung Ihrerseits ermöglichen, sind personenbezogene Daten. Bei der Verarbeitung Ihrer Daten halten wir uns strikt an die gesetzlichen Vorgaben, insbesondere die Datenschutzgrundverordnung („DSGVO“). Uns ist es sehr wichtig, dass Ihr Besuch auf unserer Website vollkommen sicher ist.
+    </p>
+
+    <h2>§ 1 Allgemeine Informationen</h2>
+    <p>Bei der Verarbeitung Ihrer Daten halten wir uns strikt an die gesetzlichen Vorgaben der DSGVO. Unser Ziel ist es, Ihnen volle Transparenz über die Datenverarbeitung zu bieten.</p>
+
+    <h2>§ 2 Verantwortliche Stelle</h2>
+    <p>Die Verantwortung für die Erhebung und Verarbeitung personenbezogener Daten auf dieser Website liegt bei:</p>
+    <p>
+      <strong>{firma}</strong><br />
+      Vertreten durch: Luca Sonnenfroh, Geschäftsführer<br />
+      Straße, Hausnummer, PLZ, Ort: _________<br />
+      Land: Deutschland<br />
+      E-Mail: <a href={`mailto:${email}`}>{email}</a><br />
+      Tel.: _________
+    </p>
+
+    <h2>§ 3 Zugriffsdaten (Server-Logfiles)</h2>
+    <p>Beim Aufruf der Website speichern wir automatisch in Server-Logfiles:</p>
+    <ul>
+      <li>Browsertyp und Browserversion</li>
+      <li>Verwendetes Betriebssystem und Hostname</li>
+      <li>Referrer URL (Herkunftsseite)</li>
+      <li>Datum und Uhrzeit der Serveranfrage</li>
+      <li>IP-Adresse (ggf. anonymisiert)</li>
+    </ul>
+    <p>Die Verarbeitung erfolgt nach Art. 6 Abs. 1 lit. f DSGVO zur Verbesserung der Stabilität unserer Website.</p>
+
+    <h2>§ 4 Kontaktaufnahme</h2>
+    <p>Bei E-Mail-Anfragen speichern wir Ihre Daten zur Bearbeitung Ihres Anliegens. Die Verarbeitung erfolgt auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese jederzeit formlos per E-Mail an uns widerrufen.</p>
+
+    <h2>§ 5 Verwendung und Weitergabe von Daten</h2>
+    <p>Ihre Daten werden nicht an Dritte verkauft oder kommerziell genutzt. Eine Weitergabe erfolgt nur im Rahmen der Zahlungsabwicklung an das Kreditinstitut oder bei gesetzlicher Verpflichtung.</p>
+
+    <h2>§ 6 Verschlüsselung (SSL/TLS)</h2>
+    <p>Diese Seite nutzt eine SSL- bzw. TLS-Verschlüsselung zum Schutz vertraulicher Inhalte. Eine verschlüsselte Verbindung erkennen Sie an „https://" und dem Schloss-Symbol im Browser.</p>
+
+    <h2>§ 7 Speicherdauer</h2>
+    <p>Personenbezogene Daten werden nur so lange gespeichert, wie es der Zweck erfordert. Gesetzliche Aufbewahrungsfristen (z. B. steuerrechtlich) können eine Speicherung von bis zu 10 Jahren vorschreiben.</p>
+
+    <h2>§ 8 Ihre Datenschutzrechte</h2>
+    <p>Als betroffene Person haben Sie folgende Rechte:</p>
+
+    <p><strong>A. Widerrufsrecht:</strong> Gemäß Art. 7 Abs. 3 DSGVO können Sie erteilte Einwilligungen jederzeit für die Zukunft widerrufen.</p>
+    
+    <p><strong>B. Auskunftsrecht:</strong> Gemäß Art. 15 DSGVO können Sie Auskunft über Ihre von uns verarbeiteten Daten, die Zwecke und die Speicherdauer verlangen.</p>
+
+    <p><strong>C. Recht auf Berichtigung:</strong> Gemäß Art. 16 DSGVO können Sie die Korrektur unrichtiger Daten verlangen.</p>
+
+    <p><strong>D. Recht auf Löschung:</strong> Gemäß Art. 17 DSGVO können Sie die Löschung Ihrer Daten verlangen, sofern keine gesetzlichen Ausnahmen (z.B. Aufbewahrungspflichten) vorliegen.</p>
+
+    <p><strong>E. Recht auf Einschränkung:</strong> Gemäß Art. 18 DSGVO können Sie die Sperrung Ihrer Daten verlangen.</p>
+
+    <p><strong>F. Recht auf Unterrichtung:</strong> Gemäß Art. 19 DSGVO informieren wir alle Empfänger Ihrer Daten über Berichtigungen oder Löschungen.</p>
+
+    <p><strong>G. Schutz vor automatisierten Entscheidungen:</strong> Gemäß Art. 22 DSGVO haben Sie das Recht, nicht einer ausschließlich auf automatisierter Verarbeitung (Profiling) beruhenden Entscheidung unterworfen zu werden.</p>
+
+    <p><strong>H. Recht auf Datenübertragbarkeit:</strong> Gemäß Art. 20 DSGVO können Sie verlangen, dass wir Ihre Daten in einem maschinenlesbaren Format an Sie oder einen Dritten übermitteln.</p>
+
+    <p><strong>I. Widerspruchsrecht:</strong> Gemäß Art. 21 DSGVO können Sie der Verarbeitung widersprechen, die auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt.</p>
+
+    <p><strong>J. Beschwerderecht:</strong> Gemäß Art. 77 DSGVO können Sie sich bei einer Aufsichtsbehörde beschweren.</p>
+
+    <p><strong>Zuständige Aufsichtsbehörde:</strong><br />
+    Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz<br />
+    Postfach 30 40, 55020 Mainz | Hintere Bleiche 34, 55116 Mainz<br />
+    E-Mail: poststelle@datenschutz.rlp.de</p>
+
+    <h2>§ 9 Gültigkeit und Änderung</h2>
+    <p>Diese Erklärung tritt am <strong>{stand}</strong> in Kraft. Wir behalten uns vor, diese bei Bedarf (z. B. neue Dienste oder rechtliche Vorgaben) anzupassen. Die jeweils aktuelle Version auf der Website ist bindend.</p>
+  </TextSection>
+</Layout>

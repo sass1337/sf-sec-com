@@ -1,18 +1,22 @@
 ---
+import { Image } from 'astro:assets';
+import myLogo from '/assets/sf-sec_logo+text_transp.png'; // Adjust path as needed
 ---
 
-<p class="odyssey-logo">Odyssey</p>
+<a href="/" class="logo-link">
+  <Image src={myLogo} alt="Sf-Sec Logo" class="odyssey-logo" />
+</a>
 
 <style>
-	.odyssey-logo {
-		width: fit-content;
-		margin: 0;
-		font-family: var(--theme-font-family-serif);
-    font-size: var(--font-size-md);
-		color: inherit;
-	}
-	.odyssey-logo:hover {
-		text-decoration: underline;
-		cursor: pointer;
-	}
+  .odyssey-logo {
+    /* Set dimensions that match your design */
+    height: 3rem; 
+    width: auto;
+    display: block;
+  }
+
+  .logo-link:hover .odyssey-logo {
+    filter: brightness(1.2); /* A nice 'glow' effect on hover */
+    cursor: pointer;
+  }
 </style>

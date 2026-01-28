@@ -1,18 +1,18 @@
 export const nav = [
 	{
-		title: 'Home',
+		title: 'Startseite',
 		slug: '/',
 	},
 	{
-		title: 'Blog',
-		slug: '/blog',
+//		title: 'Unsere',
+//		slug: '/blog',
 	},
 	{
-		title: 'About',
-		slug: '/company/about',
+		title: 'Unsere Leistungen',
+		slug: '/company/Unsere-Leistungen',
 	},
 	{
-		title: 'Contact',
-		slug: '/company/contact',
+//		title: 'Contact',
+//		slug: '/company/contact',
 	},
 ];
