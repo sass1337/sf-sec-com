@@ -1,92 +1,137 @@
 ---
-import { Container, FeatureCard } from '@components/odyssey-theme';
-
+import { Container } from '@components/odyssey-theme';
 import Layout from '../layouts/Page.astro';
-import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
 ---
 
 <Layout>
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h2>Landing Pages</h2>
-			<p>
-				Use one of our landing pages to jumpstart your website or
-				ad campaign.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/landing-pages/landing-1" title="Landing Page 1" imgSrc="/assets/images/home/screenshots/landing-1">
-				</FeatureCard>
-				<FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
-				</FeatureCard>
+	<header class="hero-section">
+		<Container>
+			<div class="hero-content">
+				<h1>Härtetest für Ihre IT</h1>
+				<p class="subtitle">
+					Maximale Sicherheit durch professionelle Penetrationstests und IT-Security Consulting. Wir finden die Schwachstellen, bevor es andere tun.
+				</p>
 			</div>
-		</section>
-	</Container>
+		</Container>
+	</header>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Company Pages</h2>
-			<p>
-				Use one of our prebuilt company pages for your about page, contact page,
-				legal pages, blog posts, etc.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/company/about" title="About Page" imgSrc="/assets/images/home/screenshots/about">
-				</FeatureCard>
-				<FeatureCard href="/company/contact" title="Contact Page" imgSrc="/assets/images/home/screenshots/contact">
-				</FeatureCard>
-				<FeatureCard href="/blog/" title="Blog Page" imgSrc="/assets/images/home/screenshots/blog">
-				</FeatureCard>
-				<FeatureCard
-					href="/blog/posts/remote-work-mental-health"
-					title="Blog Post"
-          imgSrc="/assets/images/home/screenshots/blog-post"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/company/legal"
-					imgSrc="/assets/images/home/screenshots/legal"
-					title="Legal Page"
-				>
-				</FeatureCard>
+	<section id="services" class="services-section">
+		<Container>
+			<div class="section-header">
+				<h2>Sicherheits-Leistungen</h2>
+				<p>Individuelle Lösungen für Ihre digitale Infrastruktur.</p>
 			</div>
-		</section>
-	</Container>
+			
+			<div class="services-grid">
+				<div class="service-card">
+					<h3>Penetration Testing</h3>
+					<p>Gezielte Angriffe auf Ihre Systeme, um reale Sicherheitslücken in Webanwendungen und Netzwerken aufzudecken.</p>
+				</div>
+				<div class="service-card">
+					<h3>Schwachstellen-Analyse</h3>
+					<p>Automatisierte und manuelle Scans Ihrer Infrastruktur zur Identifikation kritischer Einfallstore.</p>
+				</div>
+				<div class="service-card">
+					<h3>Security Consulting</h3>
+					<p>Beratung bei der Implementierung von Sicherheitsstandards und Schulung Ihrer Mitarbeiter.</p>
+				</div>
+			</div>
+		</Container>
+	</section>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Theme Pages</h2>
-			<p>Learn more about how to set up and use the Odyssey Theme.</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/theme/get-started"
-					imgSrc="/assets/images/home/screenshots/get-started"
-					title="Get Started"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/theme/style-guide"
-					imgSrc="/assets/images/home/screenshots/style-guide"
-					title="Style Guide"
-				>
-				</FeatureCard>
+	<section class="cta-section">
+		<Container>
+			<div class="cta-card">
+				<h2>Bereit für den Check?</h2>
+				<p>Lassen Sie uns gemeinsam analysieren, wie sicher Ihre Daten wirklich sind.</p>
+
+				<div class="cta-contact-info">
+					<p>Telefon: <a href="tel:+49111111111">+49 (0) 111 111111</a></p>
+					<p>Email: <a href="mailto:info@sf-sec.de">l.s@sf-sec.de</a></p>
+				</div>
 			</div>
-		</section>
-	</Container>
+		</Container>
+	</section>
 </Layout>
 
 <style>
-	.feature-card__section {
-		margin: var(--section-margin) auto;
+	/* Hero Bereich - Weißer Hintergrund für Logo-Sichtbarkeit */
+	.hero-section {
+		padding: clamp(4rem, 10vh, 10rem) 0;
+		background-color: #ffffff;
+		text-align: center;
 	}
-	.feature-card__grid {
+	.hero-content {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	.hero-content h1 {
+		font-size: var(--font-size-xl);
+		margin-bottom: 1.5rem;
+		font-family: var(--theme-font-family-serif);
+	}
+	.subtitle {
+		font-size: var(--font-size-md);
+		color: #444;
+		margin-bottom: 2.5rem;
+		font-family: var(--theme-font-family-sans);
+	}
+
+	/* Leistungen - Der Schwarz-Rot Split */
+	.services-section {
+		padding: var(--section-margin) 0;
+		/* 50% Dunkelgrau/Schwarz, 50% Dein Primär-Rot */
+		background: linear-gradient(90deg, #121212 50%, var(--theme-primary) 50%);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+		color: #ffffff; /* Weißer Text auf dem dunklen/roten Hintergrund */
+	}
+
+	.services-grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--theme-grid-gap);
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
 	}
+
+	.service-card {
+		padding: 2.5rem 2rem;
+		background: #ffffff;
+		color: #000000;
+		border-radius: 0; /* Harte Kanten für den IT-Look */
+		border: 2px solid #000;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		font-family: var(--theme-font-family-sans);
+	}
+
+	.service-card h3 {
+		font-family: var(--theme-font-family-serif);
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+
+	.service-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+	}
+
+	/* CTA Bereich */
+	.cta-section {
+		padding: var(--section-margin) 0;
+		background-color: #ffffff;
+		text-align: center;
+	}
+	.cta-card {
+		padding: 4rem 2rem;
+		border: 4px solid var(--theme-primary);
+	}
+
 	@media (max-width: 768px) {
-		.feature-card__grid {
-			grid-template-columns: 1fr;
+		.services-section {
+			/* Auf dem Handy lieber vertikaler Verlauf */
+			background: linear-gradient(180deg, #121212 50%, var(--theme-primary) 50%);
 		}
 	}
 </style>

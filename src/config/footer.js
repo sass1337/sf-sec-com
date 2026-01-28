@@ -7,8 +7,8 @@ export const footerLists = [
 		title: 'Firma',
 		items: [
 			{
-				title: 'Unsere Leistungen',
-				slug: '/company/unsere-leistungen',
+//				title: 'Unsere Leistungen',
+//				slug: '/company/unsere-leistungen',
 			},
 			{
 				title: 'Impressum',

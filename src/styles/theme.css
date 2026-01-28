@@ -1,40 +1,35 @@
 :root {
-	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
-	--theme-primary-hover: hsl(0, 0%, 20%);
-	--theme-on-primary: #fff;
+/* Theme Colors */
+    /* Ein kräftiges Rot, das auf Weiß sofort ins Auge fällt */
+    --theme-primary: hsl(0, 85%, 45%); 
+    --theme-primary-hover: hsl(0, 85%, 35%);
+    --theme-on-primary: #ffffff;
 
-	--theme-bg: #fff;
-	--theme-on-bg: #000;
+    /* Hintergrund: Absolut Weiß */
+    --theme-bg: #ffffff; 
+    --theme-on-bg: #000000;
 
-	--theme-surface-1: #f2f2f2;
-	--theme-on-surface-1: #000;
+    /* Header & Navigation: Ebenfalls Weiß (für dein Logo) */
+    --theme-surface-1: #ffffff; 
+    --theme-on-surface-1: #000000;
 
-	--theme-surface-2: #cce6d0;
-	--theme-on-surface-2: #000;
+    /* Sektionen & Karten: Ein sehr helles Grau oder ein ganz blasses Rot */
+    /* Damit sich Boxen dezent vom weißen Hintergrund abheben */
+    --theme-surface-2: #f8f8f8; 
+    --theme-on-surface-2: #000000;
 
-	/* Theme Shapes */
-	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
-	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
-	--theme-button-border-radius: 3rem;
+    /* Theme Shapes */
+    /* Eckig und präzise - passt perfekt zum weißen "Labor"-Look */
+    --theme-shape-radius: 0px;
+    --theme-button-border-radius: 0px;
 
-	/* Theme Transition */
-	--theme-transition: 0.2s ease-in-out;
+    /* Theme Layout */
+    --section-margin: 5rem;
 
-	/* Theme Layout */
-	--section-margin: 3rem;
-	--theme-grid-gap: 1rem;
-	--container-max-width: 1440px;
-	--container-max-width-narrow: 960px;
-	--container-padding: 0 1rem;
-
-	--theme-blog-post-header-width: 1200px;
-
-	/* Theme Fonts */
-	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
-		Times, serif;
-	--theme-font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont,
-		sans-serif;
+    /* Theme Fonts */
+    /* Deine gewünschten IT-Fonts */
+    --theme-font-family-serif: 'Thickben BC', sans-serif;
+    --theme-font-family-sans: 'Cassio BC', monospace;
 }
 
 [data-theme='default'] {
