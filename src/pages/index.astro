@@ -7,9 +7,9 @@ import Layout from '../layouts/Page.astro';
 	<header class="hero-section">
 		<Container>
 			<div class="hero-content">
-				<h1>Härtetest für Ihre IT</h1>
+				<h1>>_</h1>
 				<p class="subtitle">
-					Maximale Sicherheit durch professionelle Penetrationstests und IT-Security Consulting. Wir finden die Schwachstellen, bevor es andere tun.
+					Maximale Sicherheit durch professionelle Penetrationstests und IT-Security Consulting.
 				</p>
 			</div>
 		</Container>
@@ -18,8 +18,8 @@ import Layout from '../layouts/Page.astro';
 	<section id="services" class="services-section">
 		<Container>
 			<div class="section-header">
-				<h2>Sicherheits-Leistungen</h2>
-				<p>Individuelle Lösungen für Ihre digitale Infrastruktur.</p>
+				<h2>Unsere Dienstleistungen für Ihre Sicherheit</h2>
+				<p>Wir finden die Schwachstellen, bevor es andere tun.</p>
 			</div>
 			
 			<div class="services-grid">
@@ -38,6 +38,44 @@ import Layout from '../layouts/Page.astro';
 			</div>
 		</Container>
 	</section>
+
+<section class="security-stats-section">
+  <Container>
+    <div class="stats-grid">
+      <div class="stat-card damage-card">
+        <div class="stat-header">
+          <span class="warning-icon">⚠</span>
+          <h3>Wirtschaftlicher Schaden</h3>
+        </div>
+        <div class="stat-value">267 Mrd. €</div>
+        <p class="stat-desc">
+          Jährlicher Gesamtschaden durch Cyberangriffe in der deutschen Wirtschaft (Quelle: Bitkom).
+        </p>
+        <div class="damage-bar-container">
+          <div class="damage-bar-fill"></div>
+        </div>
+      </div>
+
+      <div class="stat-card owasp-card">
+        <div class="stat-header">
+          <h3>OWASP Top 10</h3>
+        </div>
+        <p>
+          Die kritischsten Sicherheitsrisiken für Webanwendungen. Wir testen Ihre Infrastruktur gezielt nach den aktuellsten Standards der <strong>Open Worldwide Application Security Project®</strong>.
+        </p>
+        <ul class="owasp-list">
+          <li>Broken Access Control</li>
+          <li>Cryptographic Failures</li>
+          <li>Injection Flaws</li>
+          <li>... und mehr</li>
+        </ul>
+        <a href="https://owasp.org/www-project-top-ten/" target="_blank" class="owasp-link">
+          Mehr erfahren →
+        </a>
+      </div>
+    </div>
+  </Container>
+</section>
 
 	<section class="cta-section">
 		<Container>
@@ -58,7 +96,7 @@ import Layout from '../layouts/Page.astro';
 	/* Hero Bereich - Weißer Hintergrund für Logo-Sichtbarkeit */
 	.hero-section {
 		padding: clamp(4rem, 10vh, 10rem) 0;
-		background-color: #ffffff;
+		background-color: #ffffff; [cite_start]/* [cite: 6] */
 		text-align: center;
 	}
 	.hero-content {
@@ -77,17 +115,57 @@ import Layout from '../layouts/Page.astro';
 		font-family: var(--theme-font-family-sans);
 	}
 
-	/* Leistungen - Der Schwarz-Rot Split */
+/* Leistungen - Der Schwarz-Rot Split */
 	.services-section {
-		padding: var(--section-margin) 0;
-		/* 50% Dunkelgrau/Schwarz, 50% Dein Primär-Rot */
-		background: linear-gradient(90deg, #121212 50%, var(--theme-primary) 50%);
+		padding: var(--section-margin) 0; 
+		background: linear-gradient(90deg, #121212 50%, var(--theme-primary) 50%); 
+		position: relative;
+		overflow: hidden;
+		z-index: 0; 
+	}
+
+	/* Die Neon-Linie in der Mitte (jetzt in Orange) */
+	.services-section::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 5px; /* Kern etwas breiter für mehr Farbwirkung */
+		/* Helles Orange als Kern statt reinem Weiß */
+		background-color: #ff9d66; 
+		transform: translateX(-50%);
+		z-index: -1; 
+		
+		/* Mehrschichtiger Neon-Box-Shadow in Orange-Tönen */
+		box-shadow: 
+			0 0 10px #ff7e36,
+			0 0 20px #ff7e36,
+			0 0 40px var(--theme-primary),
+			0 0 80px var(--theme-primary),
+			0 0 120px rgba(255, 126, 54, 0.5);
+		
+		pointer-events: none;
+	}
+
+	@media (max-width: 768px) {
+		.services-section {
+			background: linear-gradient(180deg, #121212 50%, var(--theme-primary) 50%); [cite: 14]
+		}
+		.services-section::before {
+			left: 0;
+			right: 0;
+			top: 50%;
+			width: 100%;
+			height: 5px;
+			transform: translateY(-50%);
+		}
 	}
 
 	.section-header {
 		text-align: center;
 		margin-bottom: 3rem;
-		color: #ffffff; /* Weißer Text auf dem dunklen/roten Hintergrund */
+		color: #ffffff; [cite_start]/* [cite: 9] */
 	}
 
 	.services-grid {
@@ -100,8 +178,9 @@ import Layout from '../layouts/Page.astro';
 		padding: 2.5rem 2rem;
 		background: #ffffff;
 		color: #000000;
-		border-radius: 0; /* Harte Kanten für den IT-Look */
+		border-radius: 0; 
 		border: 2px solid #000;
+		box-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		font-family: var(--theme-font-family-sans);
 	}
@@ -114,7 +193,114 @@ import Layout from '../layouts/Page.astro';
 
 	.service-card:hover {
 		transform: translateY(-10px);
-		box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+		/* Rahmenfarbe auf Transparent setzen, damit das Border-Image sichtbar wird */
+		border-color: transparent;
+		
+		/* 50/50 Neon-Schatten: JETZT LINKS ORANGE, RECHTS DUNKEL */
+		box-shadow: 
+			/* Linker Schatten (positiver Glow-Wert in Orange): Orange-Glow */
+			-15px 10px 30px rgba(255, 126, 54, 0.4),
+			/* Rechter Schatten (positiver X-Wert in Schwarz): Schwarz/Dunkel-Glow */
+			15px 10px 30px rgba(0, 0, 0, 0.6);
+
+		/* Rahmen ebenfalls gespiegelt: Links Orange, rechts Schwarz */
+		border-image: linear-gradient(90deg, var(--theme-primary) 50%, #000 50%) 1;
+	}
+
+	/* NEU: Security Stats Sektion (Zentriert) */
+	.security-stats-section {
+		padding: var(--section-margin) 0;
+		background-color: #0a0a0a; /* Dunkler Trenner */
+		color: #ffffff;
+		display: flex;
+		justify-content: center;
+	}
+
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 3rem;
+		max-width: 1100px;
+		width: 100%;
+		margin: 0 auto;
+		justify-items: center; /* Zentriert die Karten im Grid */
+	}
+
+	.stat-card {
+		padding: 3rem 2rem;
+		background: #111111;
+		border: 1px solid #222222;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Horizontale Zentrierung der Elemente */
+		text-align: center;   /* Zentrierung des Textes */
+	}
+
+	.stat-header {
+		margin-bottom: 1.5rem;
+	}
+
+	.warning-icon {
+		display: block;
+		color: var(--theme-primary);
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-value {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 900;
+		color: var(--theme-primary);
+		line-height: 1;
+		margin-bottom: 1rem;
+	}
+
+	.stat-desc {
+		font-size: var(--font-size-sm);
+		color: #cccccc;
+	}
+
+	.damage-bar-container {
+		width: 100%;
+		max-width: 200px;
+		height: 4px;
+		background: #333;
+		margin-top: 2rem;
+	}
+
+	.damage-bar-fill {
+		width: 85%;
+		height: 100%;
+		background: var(--theme-primary);
+		box-shadow: 0 0 10px var(--theme-primary);
+	}
+
+	.owasp-list {
+		list-style: none;
+		padding: 0;
+		margin: 1.5rem 0;
+	}
+
+	.owasp-list li {
+		margin-bottom: 0.5rem;
+		color: #999999;
+		font-size: 0.95rem;
+	}
+
+	.owasp-link {
+		margin-top: auto;
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: bold;
+		padding: 0.6rem 1.2rem;
+		border: 1px solid var(--theme-primary);
+		transition: background 0.3s ease, color 0.3s ease;
+	}
+
+	.owasp-link:hover {
+		background: var(--theme-primary);
+		color: #ffffff;
 	}
 
 	/* CTA Bereich */
@@ -125,13 +311,16 @@ import Layout from '../layouts/Page.astro';
 	}
 	.cta-card {
 		padding: 4rem 2rem;
-		border: 4px solid var(--theme-primary);
+		border: 4px solid var(--theme-primary); [cite_start]/* [cite: 13] */
+	}
+
+	.cta-contact-info {
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 768px) {
 		.services-section {
-			/* Auf dem Handy lieber vertikaler Verlauf */
-			background: linear-gradient(180deg, #121212 50%, var(--theme-primary) 50%);
+			background: linear-gradient(180deg, #121212 50%, var(--theme-primary) 50%); [cite_start]/* [cite: 14] */
 		}
 	}
 </style>
