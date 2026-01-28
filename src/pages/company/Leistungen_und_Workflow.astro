@@ -1,0 +1,271 @@
+---
+import { Container } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+	title: 'Leistungen und Workflow | SF-SEC - Sonnenfroh IT-Security',
+	description: 'Übersicht der Sicherheits-Checks und methodischen Vorgehensweise.',
+};
+---
+
+<Layout {seo}>
+  <section class="pricing-hero">
+    <Container>
+      <h1>Sicherheits-Leistungen</h1>
+    </Container>
+  </section>
+
+  <section class="promo-section">
+    <Container>
+      <div class="promo-box">
+        <p>Exklusiv für Neukunden: Erst-Analyse (OSINT, Enumeration & Vuln Analysis) für nur <strong>999€</strong></p>
+      </div>
+    </Container>
+  </section>
+
+  <section class="pricing-table-section">
+    <Container>
+      <div class="table-wrapper">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Standard Check</th>
+              <th>Individuelle Tests</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Einmaliges Full-Audit</td>
+              <td>Maßgeschneidertes Scoping</td>
+            </tr>
+            <tr>
+              <td>Manuelle Penetrationstests</td>
+              <td>Spezialisierte Zielsysteme</td>
+            </tr>
+            <tr>
+              <td>Projektabhängige Scans</td>
+              <td>Ad-hoc Überprüfungen</td>
+            </tr>
+            <tr>
+              <td>Technischer Abschlussbericht</td>
+              <td>Detaillierte Analyse</td>
+            </tr>
+            <tr>
+              <td>Status Quo Analyse</td>
+              <td>Infrastruktur-Fokus</td>
+            </tr>
+            <tr class="price-row">
+              <td class="value">Projektbasiert</td>
+              <td class="value">Nach Aufwand</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Container>
+  </section>
+
+  <section class="process-section">
+    <Container>
+      <h2 class="process-title">Methodik & Workflow</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="step-number">01</span>
+          <h3>Rules of Engagement (RoE)</h3>
+          <p>Definition von Scope, Timeline, Notfallkontakten und rechtlicher Autorisierung.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">02</span>
+          <h3>OSINT & Discovery</h3>
+          <p>Identifikation der Angriffsfläche und Aufdeckung öffentlich zugänglicher Informationen.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">03</span>
+          <h3>Enumeration</h3>
+          <p>Aktives Probing der Dienste, Verzeichnis-Suche und Identifikation des Web-Stacks.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">04</span>
+          <h3>Vulnerability Analysis</h3>
+          <p>Abgleich der Service-Versionen gegen aktuelle Datenbanken und manuelle Schwachstellen-Suche.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">05</span>
+          <h3>Exploitation</h3>
+          <p>Kontrollierter Zugriff und Verifizierung der Sicherheitslücken durch gezielte Exploits.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">06</span>
+          <h3>Post-Exploitation</h3>
+          <p>Analyse lokaler Eskalationspfade und Visualisierung von Angriffswegen innerhalb der Domäne.</p>
+        </div>
+        <div class="process-step full-width">
+          <span class="step-number">07</span>
+          <h3>Reporting & Read-Out</h3>
+          <p>Detaillierte Dokumentation aller Befunde, Risikobewertung und gemeinsame Besprechung der Maßnahmen.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+</Layout>
+
+<style>
+  /* Promo Box */
+  .promo-section {
+    padding-bottom: 4rem;
+  }
+  
+  .promo-box {
+    background-color: #ffffff;
+    color: #000;
+    padding: 2.5rem;
+    text-align: center;
+    border: 4px solid var(--theme-primary);
+    max-width: 800px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--theme-font-family-sans);
+  }
+
+  .promo-box strong {
+    color: var(--theme-primary) !important;
+    font-size: 1.3rem;
+  }
+
+  /* Hero */
+  .pricing-hero {
+    padding: 6rem 0 3rem;
+    text-align: center;
+  }
+
+  .pricing-hero h1 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: var(--theme-font-family-serif);
+    letter-spacing: 2px;
+    color: #000000 !important;
+  }
+
+  /* Tabelle */
+  .pricing-table-section {
+    padding-bottom: 6rem;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--theme-font-family-sans);
+    text-align: center;
+  }
+
+  .pricing-table th {
+    padding: 2.5rem 1rem;
+    font-family: var(--theme-font-family-serif);
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: #000000 !important;
+  }
+
+  .pricing-table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .price-row {
+    border-top: 2px solid #000;
+  }
+
+  .price-row .value {
+    padding: 2.5rem 1rem;
+    font-weight: bold;
+    color: #000000 !important;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-size: 1.1rem;
+    font-family: var(--theme-font-family-serif);
+  }
+
+  /* Methodik Sektion */
+  .process-section {
+    padding: 6rem 0 8rem;
+    border-top: 1px solid #eee;
+  }
+
+  .process-title {
+    font-family: var(--theme-font-family-serif);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+    color: #000000 !important;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    border: 1px solid #ddd;
+    padding: 2.5rem 2rem;
+    background: #ffffff; /* Sichergestellt: Weißer Hintergrund */
+    text-align: center;
+  }
+
+  .step-number {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #999;
+    font-family: var(--theme-font-family-sans);
+  }
+
+  .process-step h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: var(--theme-font-family-serif);
+    color: #000000 !important;
+  }
+
+  .process-step p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    font-family: var(--theme-font-family-sans);
+  }
+
+  /* Korrektur: Full-Width Box jetzt ohne Grauschleier */
+  .full-width {
+    grid-column: span 2;
+    background-color: #ffffff !important; 
+    border: 1px solid #ddd !important;
+  }
+
+  @media (max-width: 768px) {
+    .process-grid {
+      grid-template-columns: 1fr;
+    }
+    .full-width {
+      grid-column: span 1;
+    }
+  }
+</style>
