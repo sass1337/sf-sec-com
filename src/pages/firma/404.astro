@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Page.astro';
+---
+<Layout seo={{title:'404 - Seite nicht gefunden', noindex:true}}>
+  <section style="padding:8rem 0; text-align:center; background:var(--bg-secondary)">
+    <div class="container">
+      <h1 style="font-size:4rem; color:var(--color-primary)">404</h1>
+      <h2 style="margin-bottom:2rem">Hoppla! Diese Seite existiert nicht.</h2>
+      <p style="margin-bottom:3rem">Die von dir gesuchte Sicherheitslücke (oder Seite) wurde nicht gefunden oder verschoben.</p>
+      <a href="/" style="padding:1rem 2rem; background:var(--color-primary); color:white; text-decoration:none; border-radius:5px">
+        Zurück zur Startseite
+      </a>
+    </div>
+  </section>
+</Layout>
