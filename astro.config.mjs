@@ -1,5 +1,5 @@
-// import sitemap from "@astrojs/sitemap"; 
-// sitemap() aus integrations entfernen
+import { defineConfig } from 'astro/config';
+import icon from "astro-icon";
 
 export default defineConfig({
   site: 'https://sf-sec.com',
