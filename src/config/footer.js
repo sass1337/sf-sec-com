@@ -6,17 +6,17 @@ export const footerLists = [
   {
     title: 'Firma',
     items: [
-      { title: 'Impressum', slug: '/company/impressum' },
-      { title: 'Datenschutz', slug: '/company/datenschutz' },
-      { title: 'AGBs', slug: '/company/agb' },
+      { title: 'Impressum', slug: '/firma/impressum' },
+      { title: 'Datenschutz', slug: '/firma/datenschutz' },
+      { title: 'AGBs', slug: '/firma/agb' },
     ],
   },
   {
     title: 'Seiten',
     items: [
       { title: 'Startseite', slug: '/' },
-      { title: 'Warum IT-Security?', slug: '/company/warum-it-security' },
-      { title: 'Pentesting-Prozess', slug: '/company/pentesting-prozess' },
+      { title: 'Warum IT-Security?', slug: '/firma/warum-it-security' },
+      { title: 'Pentesting-Prozess', slug: '/firma/pentesting-prozess' },
     ],
   },
   {

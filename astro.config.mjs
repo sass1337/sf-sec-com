@@ -6,11 +6,13 @@ export default defineConfig({
   site: 'https://sf-sec.com', // Tipp: Slash am Ende ist optional, Astro regelt das
   // sitemap: true,  <-- Diese Zeile MUSS weg, sie verursacht den 'reduce' Fehler
   integrations: [
-    sitemap(), 
-    icon({
-      iconDir: "src/components/icons",
-    })
-  ],
+  sitemap({
+    filter: (page) => page !== 'https://sf-sec.com/404' // Schließt die 404 aus und initialisiert die Liste korrekt
+  }), 
+  icon({
+    iconDir: "src/components/icons",
+  })
+],
   vite: {
     build: {
       cssMinify: 'lightningcss',
