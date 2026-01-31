@@ -1,22 +1,20 @@
----
-import { Image } from 'astro:assets';
-import myLogo from '/assets/sf-sec_logo+text_transp.png'; // Adjust path as needed
----
-
-<a href="/" class="logo-link">
-  <Image src={myLogo} alt="Sf-Sec Logo" class="odyssey-logo" />
+<div class="logo">
+<a href="/" aria-label="SF-SEC - Sonnenfroh IT-Security Homepage">
+<span class="logo-bracket">[</span>
+<span class="logo-text">SF-SEC</span>
+<span class="logo-bracket">]</span>
+<span class="logo-cursor">_</span>
 </a>
-
+</div>
 <style>
-  .odyssey-logo {
-    /* Set dimensions that match design */
-    height: 3rem; 
-    width: auto;
-    display: block;
-  }
-
-  .logo-link:hover .odyssey-logo {
-    filter: brightness(1.2); /* A nice 'glow' effect on hover */
-    cursor: pointer;
-  }
+.logo{display:inline-block;position:relative;z-index:10}
+.logo a{font-family:var(--font-display);font-size:clamp(1.75rem,2.5vw,2.5rem);font-weight:900;text-decoration:none;display:flex;align-items:center;gap:0.3rem;letter-spacing:0.1em;transition:all var(--transition-base);position:relative}
+.logo-bracket{color:var(--color-secondary);font-weight:900;filter:drop-shadow(var(--glow-orange));animation:pulse-bracket 2s ease-in-out infinite}
+.logo-text{color:var(--text-primary);position:relative;text-shadow:0 0 10px rgba(249,115,22,0.3);transition:all var(--transition-base)}
+.logo-cursor{color:var(--color-secondary);animation:blink 1s step-end infinite;filter:drop-shadow(var(--glow-orange))}
+@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+@keyframes pulse-bracket{0%,100%{transform:scale(1);filter:drop-shadow(var(--glow-orange))}50%{transform:scale(1.05);filter:drop-shadow(var(--glow-strong))}}
+.logo a:hover .logo-text{color:var(--color-secondary);text-shadow:var(--glow-strong);transform:scale(1.05)}
+.logo a:hover .logo-bracket{animation:pulse-bracket 0.5s ease-in-out infinite}
+@media (max-width:768px){.logo a{font-size:1.75rem}}
 </style>

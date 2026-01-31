@@ -1,0 +1,20 @@
+---
+import { footerLists } from '../config/footer.js';
+---
+<footer style="background: var(--bg-secondary); padding: 4rem 0 2rem; margin-top: 4rem; border-top: 1px solid rgba(0,0,0,0.1);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
+      {footerLists.map((list) => (
+        <div>
+          <h4 style="margin-bottom: 1rem; color: var(--color-primary);">{list.title}</h4>
+          <ul style="list-style: none;">
+            {list.items.map((item) => (
+              <li style="margin-bottom: 0.5rem;"><a href={item.slug} style="color: var(--text-secondary);">{item.title}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">© {new Date().getFullYear()} SF-SEC - Sonnenfroh IT-Security. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>

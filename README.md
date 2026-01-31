@@ -1,71 +1,59 @@
-<p align="center">
-  <img src="assets/gh-banner.png" alt="Odyssey Theme Banner">
-</p>
+# SF-SEC - Sonnenfroh IT-Security Website (FINAL OPTIMIZED)
 
-<br/>
-<div align="center">
-  <a href="https://twitter.com/jaydanurwin">
-  <img src="assets/twitter-badge.svg" alt="Follow Jaydan Urwin on Twitter"/>
-</a>
-  <a href="https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0">
-    <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
-  </a>
-</div>
-<br/>
+## ✅ Alle 14 Punkte umgesetzt!
 
-# Odyssey Theme
+1. ✅ **Pentesting-Prozess Tabelle** - Korrigiert und lesbar
+2. ✅ **Buttons NUR Outline** - Alle Buttons transparent mit Rahmen
+3. ✅ **Header dunkler** - Logo gut sichtbar auf dunklem Hintergrund
+4. ✅ **Kontakt-Box zentriert** - Mit scroll-margin-top
+5. ✅ **Kein ISO/BSI Verweis** - Entfernt aus Security Consulting
+6. ✅ **Favicon erstellt** - favicon.svg im /public
+7. ✅ **Logo großformat** - logo-large.svg mit weißem Hintergrund
+8. ✅ **Scroll-Animationen** - Fade-in, Slide, Scale beim Scrollen
+9. ✅ **60-30-10 Farbregel** - Basis 60%, Secondary 30%, Akzent 10%
+10. ✅ **Monochromatische Varianten** - Schattierungen von Orange
+11. ✅ **Farbpsychologie** - Orange (Vertrauen), Amber (Action)
+12. ✅ **Alle Seiten funktionsfähig** - Getestet
+13. ✅ **Laien-verständlich** - Pentesting-Prozess klar erklärt
+14. ✅ **Warum IT-Security Seite** - Neue Seite erstellt & in Nav
 
-Odyssey Theme is a modern theme/starter for a business or startup's marketing website. It provides landing page examples, a full-featured blog, contact forms, and more. It is fully themeable to match your business' branding and style. It even includes a theme switcher component to show how easily the entire style of the site can be changed with only a few lines of CSS.
-
-## Features
-
-<p align="center">
-  <img src="assets/lh-screenshot.png" alt="Screenshot of perfect score in Lighthouse benchmark">
-</p>
-
-
-- ✅ **A perfect score in Lighthouse**
-- ✅ **Blazing fast performance thanks to Astro 🚀**
-- ✅ **A Full Featured Blog with Tagging**
-- ✅ **Fully theme-able styles with for buttons, shapes, backgrounds, surfaces, etc.**
-- ✅ **Responsive, mobile-friendly landing pages**
-- ✅ **SEO Best Practices (Open Graph, Canonical URLs, sitemap)**
-- ✅ **Performant Local Fonts Setup**
-- ✅ **Contact Forms Setup for Netlify, Formspree, Formspark, etc.**
-- ✅ **A package of ready-to-use UI components**
-
-
-## Demo
-
-View a [live demo](https://odyssey-theme.sapling.supply/) of the Odyssey Theme.
-
-## Documentation
-
-1. View the [Theme Setup Guide](https://odyssey-theme.sapling.supply/theme/theme-setup)
-2. View the [Customizing the Theme Guide](https://odyssey-theme.sapling.supply/theme/customizing-odyssey)
-
-## Usage
+## 🚀 Installation
 
 ```bash
-cd theme
-
+cd sf-sec-optimized
 npm install
-
-npm start
+npm run dev
 ```
 
-## Deploy
+## 🎨 Design-Prinzipien
 
-Feel free to deploy and host your site on your favorite static hosting service such as Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
+**60-30-10 Farbregel:**
+- 60% Basis: Dunkle Backgrounds (#1a1d29)
+- 30% Sekundär: Orange-Töne (#f97316)
+- 10% Akzent: Amber für CTAs (#fbbf24)
 
-Astro has [an in-depth guide](https://docs.astro.build/en/guides/deploy/) on how to deploy an Astro project to each service.
+**Scroll-Animationen:**
+- .scroll-fade-in
+- .scroll-slide-left
+- .scroll-slide-right
+- .scroll-scale
 
-## Sponsor
+## 📁 Seiten
 
-If you find this theme useful, please consider donating to support the continued development of it with the link below
+- `/` - Homepage mit Scroll-Animationen
+- `/company/warum-it-security` - Warum IT-Security wichtig ist
+- `/company/pentesting-prozess` - PTES-Prozess laienverständlich
+- `/company/impressum` - Impressum
+- `/company/datenschutz` - Datenschutz
+- `/company/agb` - AGB
 
-[Donate to Odyssey Theme](https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0)
+## 🎯 Vor Go-Live
 
-## Support
+1. Adresse in Impressum, Datenschutz, AGB eintragen
+2. USt-IdNr ergänzen
+3. Telefonnummer & E-Mail prüfen
 
-Please feel free to post issues or submit PRs to this repo and we will do our best to respond in a timely manner, keeping in mind this template is offered for free as is on GitHub.
+---
+
+**SF-SEC - Sonnenfroh IT-Security**
+Professionelle IT-Security nach PTES-Standard

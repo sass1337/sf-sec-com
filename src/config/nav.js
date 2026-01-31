@@ -1,18 +1,6 @@
 export const nav = [
-	{
-		title: 'Startseite',
-		slug: '/',
-	},
-	{
-//		title: 'Unsere',
-//		slug: '/blog',
-	},
-	{
-		title: 'Leistungen und Workflow',
-		slug: '/company/Leistungen_und_Workflow',
-	},
-	{
-//		title: 'Contact',
-//		slug: '/company/contact',
-	},
+  { title: 'Startseite', slug: '/' },
+  { title: 'Warum IT-Security?', slug: '/company/warum-it-security' },
+  { title: 'Pentesting-Prozess', slug: '/company/pentesting-prozess' },
+  { title: 'Kontakt', slug: '/#kontakt' },
 ];

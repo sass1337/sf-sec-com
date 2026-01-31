@@ -1,21 +1,51 @@
-html,
-body {
-	height: 100%;
-}
-
-body {
-	max-width: 1920px;
-	margin: 0 auto;
-	background-color: var(--theme-bg);
-	position: relative;
-}
-
-pre {
-  padding: 1em;
-  border-radius: 0.5em;
-  overflow: auto;
-}
-
-pre .language-id {
-  display: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700;900&display=swap');
+:root{--color-base-darkest:#0f1117;--color-base-darker:#1a1d29;--color-base-dark:#252936;--color-base-medium:#2f3442;--color-secondary-dark:#ea580c;--color-secondary:#f97316;--color-secondary-light:#fb923c;--color-secondary-pale:rgba(249,115,22,0.1);--color-secondary-subtle:rgba(249,115,22,0.05);--color-accent:#fbbf24;--color-accent-dark:#d97706;--text-primary:#f8fafc;--text-secondary:#cbd5e1;--text-tertiary:#94a3b8;--font-sans:'Inter',sans-serif;--font-display:'DM Sans',sans-serif;--shadow-lg:0 10px 15px rgba(0,0,0,0.5);--shadow-xl:0 20px 25px rgba(0,0,0,0.6);--shadow-orange:0 10px 30px -10px rgba(249,115,22,0.4);--glow-orange:0 0 20px rgba(249,115,22,0.3),0 0 40px rgba(249,115,22,0.15);--glow-strong:0 0 30px rgba(249,115,22,0.5),0 0 60px rgba(249,115,22,0.25);--radius-lg:0.75rem;--radius-xl:1rem;--transition-fast:0.15s ease;--transition-base:0.3s cubic-bezier(0.4,0,0.2,1);--transition-smooth:0.5s cubic-bezier(0.4,0,0.2,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-sans);line-height:1.7;color:var(--text-primary);background:var(--color-base-darker);overflow-x:hidden}
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 10% 20%,var(--color-secondary-subtle) 0%,transparent 50%),radial-gradient(circle at 90% 80%,rgba(251,191,36,0.03) 0%,transparent 50%);pointer-events:none;z-index:0;animation:gradientShift 15s ease infinite}
+@keyframes gradientShift{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.8;transform:scale(1.05)}}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:700;line-height:1.2;color:var(--text-primary);margin-bottom:1.5rem}
+h1{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;letter-spacing:-0.02em}
+h2{font-size:clamp(2rem,4vw,3.5rem);font-weight:800}
+h3{font-size:clamp(1.5rem,3vw,2.25rem)}
+p{color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.8}
+strong{color:var(--text-primary);font-weight:700}
+.container{max-width:1280px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 2.5rem;font-family:var(--font-display);font-weight:700;text-decoration:none;border-radius:var(--radius-lg);transition:all var(--transition-base);cursor:pointer;position:relative;overflow:hidden;white-space:nowrap}
+.btn::before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;transform:translate(-50%,-50%);transition:width 0.6s,height 0.6s;z-index:-1}
+.btn-primary{background:transparent;color:var(--color-secondary);border:2px solid var(--color-secondary);box-shadow:var(--shadow-orange)}
+.btn-primary::before{background:var(--color-secondary)}
+.btn-primary:hover{color:white;border-color:var(--color-secondary-dark);transform:translateY(-3px);box-shadow:var(--glow-strong)}
+.btn-primary:hover::before{width:400px;height:400px}
+.btn-secondary{background:transparent;color:var(--color-accent);border:2px solid var(--color-accent)}
+.btn-secondary::before{background:var(--color-accent)}
+.btn-secondary:hover{color:var(--color-base-darkest);border-color:var(--color-accent-dark);transform:translateY(-3px);box-shadow:0 0 20px rgba(251,191,36,0.4)}
+.btn-secondary:hover::before{width:400px;height:400px}
+.btn-large{padding:1.25rem 3rem;font-size:1.125rem}
+.card{background:var(--color-base-dark);border-radius:var(--radius-xl);padding:2rem;box-shadow:var(--shadow-lg);border:1px solid var(--color-secondary-pale);transition:all var(--transition-smooth);position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,var(--color-secondary-pale),transparent);transition:left 0.6s}
+.card:hover::before{left:100%}
+.card:hover{transform:translateY(-8px) scale(1.02);box-shadow:var(--glow-strong),var(--shadow-xl);border-color:var(--color-secondary)}
+.badge{display:inline-flex;padding:0.625rem 1.5rem;background:linear-gradient(135deg,var(--color-secondary),var(--color-accent));color:white;font-size:0.875rem;font-weight:700;border-radius:9999px;text-transform:uppercase;letter-spacing:0.05em;box-shadow:var(--shadow-orange);animation:pulse-badge 3s ease-in-out infinite}
+@keyframes pulse-badge{0%,100%{box-shadow:var(--shadow-orange);transform:scale(1)}50%{box-shadow:var(--glow-strong);transform:scale(1.05)}}
+a{color:var(--color-secondary);text-decoration:none;transition:all var(--transition-fast)}
+a:hover{color:var(--color-secondary-light)}
+.scroll-fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease-out,transform 0.8s ease-out}
+.scroll-fade-in.visible{opacity:1;transform:translateY(0)}
+.scroll-slide-left{opacity:0;transform:translateX(-50px);transition:opacity 0.8s ease-out,transform 0.8s ease-out}
+.scroll-slide-left.visible{opacity:1;transform:translateX(0)}
+.scroll-slide-right{opacity:0;transform:translateX(50px);transition:opacity 0.8s ease-out,transform 0.8s ease-out}
+.scroll-slide-right.visible{opacity:1;transform:translateX(0)}
+.scroll-scale{opacity:0;transform:scale(0.9);transition:opacity 0.8s ease-out,transform 0.8s ease-out}
+.scroll-scale.visible{opacity:1;transform:scale(1)}
+.animate-fade-up{animation:fadeInUp 0.8s ease-out forwards}
+.animate-scale{animation:scaleIn 0.6s ease-out forwards}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+::selection{background:var(--color-secondary);color:white}
+::-webkit-scrollbar{width:12px}
+::-webkit-scrollbar-track{background:var(--color-base-dark)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--color-secondary),var(--color-accent));border-radius:6px}
+:focus-visible{outline:2px solid var(--color-secondary);outline-offset:3px;box-shadow:var(--glow-orange)}
+@media (max-width:768px){.container{padding:0 1.5rem}.btn{width:100%;max-width:350px}}

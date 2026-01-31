@@ -1,159 +1,56 @@
 ---
-import { TextSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
-
-const seo = {
-  title: `AGB | SF-SEC`,
-  description: `Allgemeine Geschäftsbedingungen von SF-SEC - Sonnenfroh IT-Security für B2B IT-Security Dienstleistungen.`,
-};
-
-const email = "l.s@sf-sec.com";
-const firma = "SF-SEC - Sonnenfroh IT-Security";
-const stand = "01.01.2026";
 ---
+<Layout seo={{title:'AGB | SF-SEC',noindex:true}}>
+<section style="padding:6rem 0;background:var(--bg-secondary)">
+<div class="container" style="max-width:900px;line-height:1.8">
+<h1 style="margin-bottom:2rem">Allgemeine Geschäftsbedingungen</h1>
+<p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen <strong>SF-SEC - Sonnenfroh IT-Security</strong> (nachfolgend „SF-SEC“) und ihren Kunden.</p>
 
-<Layout seo={seo}>
-  <div class="legal-wrapper">
-    <TextSection narrow>
-      <div class="legal-content">
-        <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 1 Geltungsbereich</h2>
+<p>(1) Diese AGB gelten ausschließlich für Unternehmer im Sinne von § 14 BGB.<br/>
+(2) Abweichende Bedingungen des Kunden finden keine Anwendung, es sei denn, SF-SEC stimmt ihrer Geltung ausdrücklich schriftlich zu. Diese AGB gelten für alle Verträge über IT-Security Dienstleistungen, insbesondere Penetrationstests, Sicherheitsanalysen und Beratungsleistungen.</p>
 
-        <p>
-          Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen
-          <strong>{firma}</strong> (nachfolgend „SF-SEC“) und ihren Kunden.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 2 Leistungen</h2>
+<p>SF-SEC erbringt Dienstleistungen im Bereich:
+<ul style="margin-left:1.5rem">
+    <li>Penetrationstests (Webanwendungen, Netzwerke, Infrastrukturen)</li>
+    <li>Schwachstellen-Analysen</li>
+    <li>IT-Sicherheitsberatung (Security Consulting, OSINT, Schulungen)</li>
+</ul>
+Die konkrete Leistung ergibt sich aus dem jeweiligen Angebot oder Vertrag. SF-SEC schuldet keinen bestimmten Erfolg, sondern eine fachgerechte Dienstleistung nach aktuellem Stand der Technik.</p>
 
-        <h2>§ 1 Geltungsbereich</h2>
-        <p>
-          (1) Diese AGB gelten ausschließlich für Unternehmer im Sinne von § 14 BGB.<br />
-          (2) Abweichende Bedingungen des Kunden finden keine Anwendung, es sei denn, SF-SEC stimmt ihrer Geltung ausdrücklich schriftlich zu.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 3 Vertragsschluss</h2>
+<p>Ein Vertrag kommt zustande durch ein schriftliches Angebot von SF-SEC und die schriftliche Annahme durch den Kunden (E-Mail ausreichend).</p>
 
-        <h2>§ 2 Leistungen</h2>
-        <p>
-          SF-SEC erbringt Dienstleistungen im Bereich:
-        </p>
-        <ul>
-          <li>Penetrationstests</li>
-          <li>Schwachstellen-Analysen</li>
-          <li>IT-Sicherheitsberatung (Security Consulting)</li>
-        </ul>
-        <p>
-          Die konkrete Leistung ergibt sich aus dem jeweiligen Angebot oder Vertrag.
-          SF-SEC schuldet keinen bestimmten Erfolg, sondern eine fachgerechte Dienstleistung nach aktuellem Stand der Technik.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 4 Mitwirkungspflichten des Kunden</h2>
+<p>Der Kunde stellt alle zur Leistungserbringung erforderlichen Informationen, Zugänge und Genehmigungen rechtzeitig bereit. Der Kunde bestätigt, zur Beauftragung der Tests berechtigt zu sein. Er verpflichtet sich, betroffene Systeme vor Tests zu sichern und Ansprechpartner für Notfälle zu benennen.</p>
 
-        <h2>§ 3 Vertragsschluss</h2>
-        <p>
-          Ein Vertrag kommt zustande durch ein schriftliches Angebot von SF-SEC und die schriftliche Annahme durch den Kunden (E-Mail ausreichend).
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 5 Vergütung</h2>
+<p>Die Vergütung erfolgt gemäß Angebot auf Stundenbasis oder als Projektpauschale. Alle Preise verstehen sich netto zuzüglich gesetzlicher Umsatzsteuer. Rechnungen sind innerhalb von 14 Tagen ohne Abzug fällig. SF-SEC ist berechtigt, Vorauszahlungen zu verlangen (z. B. 30% bei Projekten über 5.000€).</p>
 
-        <h2>§ 4 Mitwirkungspflichten des Kunden</h2>
-        <p>
-          Der Kunde stellt alle zur Leistungserbringung erforderlichen Informationen, Zugänge und Genehmigungen rechtzeitig bereit.
-          Der Kunde bestätigt, zur Beauftragung der Tests berechtigt zu sein.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 6 Vertraulichkeit</h2>
+<p>Beide Parteien verpflichten sich zur vertraulichen Behandlung aller nicht öffentlichen Informationen, die im Rahmen der Zusammenarbeit bekannt geworden sind. Diese Pflicht gilt auch über das Vertragsende hinaus. Der Auftragnehmer wird gefundene Schwachstellen ausschließlich dem Auftraggeber mitteilen.</p>
 
-        <h2>§ 5 Vergütung</h2>
-        <p>
-          Die Vergütung erfolgt gemäß Angebot auf Stundenbasis oder als Projektpauschale.
-          Alle Preise verstehen sich netto zuzüglich gesetzlicher Umsatzsteuer.
-        </p>
-        <p>
-          Rechnungen sind innerhalb von 14 Tagen ohne Abzug fällig. SF-SEC ist berechtigt, Vorauszahlungen zu verlangen.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 7 Haftung</h2>
+<p>(1) SF-SEC haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit.<br/>
+(2) Bei einfacher Fahrlässigkeit haftet SF-SEC nur bei Verletzung wesentlicher Vertragspflichten und beschränkt auf den vertragstypischen, vorhersehbaren Schaden.<br/>
+(3) Keine Haftung besteht für mittelbare Schäden, entgangenen Gewinn oder Datenverluste, sofern kein Vorsatz oder grobe Fahrlässigkeit vorliegt.<br/>
+(4) Eine Haftung für erfolgreiche Abwehr von Angriffen oder vollständige Sicherheit wird ausdrücklich ausgeschlossen.</p>
 
-        <h2>§ 6 Vertraulichkeit</h2>
-        <p>
-          Beide Parteien verpflichten sich zur vertraulichen Behandlung aller nicht öffentlichen Informationen.
-          Diese Pflicht gilt auch über das Vertragsende hinaus.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 8 Urheberrechte & Nutzungsrechte</h2>
+<p>Alle Berichte, Dokumentationen und Ergebnisse bleiben geistiges Eigentum von SF-SEC. Der Kunde erhält ein einfaches, nicht übertragbares Nutzungsrecht für interne Zwecke.</p>
 
-        <h2>§ 7 Haftung</h2>
-        <p>
-          (1) SF-SEC haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit.<br />
-          (2) Bei einfacher Fahrlässigkeit haftet SF-SEC nur bei Verletzung wesentlicher Vertragspflichten und beschränkt auf den vertragstypischen, vorhersehbaren Schaden.<br />
-          (3) Keine Haftung besteht für mittelbare Schäden, entgangenen Gewinn oder Datenverluste, sofern kein Vorsatz oder grobe Fahrlässigkeit vorliegt.<br />
-          (4) Eine Haftung für erfolgreiche Abwehr von Angriffen oder vollständige Sicherheit wird ausdrücklich ausgeschlossen.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 9 Datenschutz</h2>
+<p>Die Verarbeitung personenbezogener Daten erfolgt gemäß DSGVO. Details sind der Datenschutzerklärung auf dieser Website zu entnehmen.</p>
 
-        <h2>§ 8 Urheberrechte & Nutzungsrechte</h2>
-        <p>
-          Alle Berichte, Dokumentationen und Ergebnisse bleiben geistiges Eigentum von SF-SEC.
-          Der Kunde erhält ein einfaches, nicht übertragbares Nutzungsrecht für interne Zwecke.
-        </p>
+<h2 style="color:var(--color-primary);margin:2.5rem 0 1rem;font-size:1.5rem">§ 10 Schlussbestimmungen</h2>
+<p>Es gilt deutsches Recht. Gerichtsstand ist – soweit zulässig – der Sitz von SF-SEC. Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
 
-        <h2>§ 9 Datenschutz</h2>
-        <p>
-          Die Verarbeitung personenbezogener Daten erfolgt gemäß DSGVO.
-          Details sind der Datenschutzerklärung auf dieser Website zu entnehmen.
-        </p>
-
-        <h2>§ 10 Schlussbestimmungen</h2>
-        <p>
-          Es gilt deutsches Recht. Gerichtsstand ist – soweit zulässig – der Sitz von SF-SEC.
-          Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
-        </p>
-
-        <p>
-          Stand der AGB: <strong>{stand}</strong><br />
-          Kontakt: <a href={`mailto:${email}`}>{email}</a>
-        </p>
-      </div>
-    </TextSection>
-  </div>
+<p style="margin-top:3rem;font-size:0.9rem;color:var(--text-muted)">
+Stand der AGB: 01.01.2026<br/>
+Kontakt: <a href="mailto:l.s@sf-sec.com">l.s@sf-sec.com</a>
+</p>
+</div>
+</section>
 </Layout>
-
-<style>
-  .legal-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 4rem 0;
-    background-color: #ffffff;
-  }
-
-  .legal-content {
-    text-align: center;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
-    font-family: var(--theme-font-family-sans);
-    color: #333;
-  }
-
-  .legal-content h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-family: var(--theme-font-family-serif);
-    color: #000;
-  }
-
-  .legal-content h2 {
-    font-size: 1.1rem;
-    margin-top: 2.5rem;
-    text-transform: uppercase;
-    color: var(--theme-primary);
-    border-bottom: 1px solid #eee;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-
-  .legal-content ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .legal-content li {
-    margin: 0.5rem 0;
-  }
-
-  .legal-content a {
-    color: var(--theme-primary);
-    text-decoration: none;
-  }
-
-  .legal-content a:hover {
-    text-decoration: underline;
-  }
-</style>

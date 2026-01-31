@@ -1,26 +1,14 @@
 ---
-import { SkipLink } from '@components/odyssey-theme';
-import BaseHead from '../components/head/BaseHead.astro';
-import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
-
-export interface Props {
-	seo?: BaseHeadProps;
-}
-
+import BaseHead from '../components/BaseHead.astro';
+export interface Props { seo?: any; }
 const { seo } = Astro.props;
 ---
-
-<html lang="en">
-	<head>
-		<BaseHead {...seo} />
-	</head>
-	<body>
-		<SkipLink />
-    <slot name="announcement-bar" />
-		<slot name="header" />
-		<main id="content">
-			<slot />
-		</main>
-		<slot name="footer" />
-	</body>
+<!DOCTYPE html>
+<html lang="de">
+<head><BaseHead {...seo} /></head>
+<body>
+  <slot name="header" />
+  <main id="content"><slot /></main>
+  <slot name="footer" />
+</body>
 </html>
